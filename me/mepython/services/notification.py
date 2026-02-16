@@ -1,0 +1,9 @@
+class Notification:
+    def send(self,message:str):
+        raise NotImplementedError
+class PushNotification(Notification):
+        def send(self,message:str):
+            print("push notification",message)
+class EmailNotification(Notification):
+     def send(self,message:str):
+          print("email notification",message)

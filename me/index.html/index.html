@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Document</title>
+    <style>
+ body{
+    margin:0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    display:flex
+ }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <h1> My To-Do List</h1>
+        <input id="task" onnkeydown="if (event.key==="enter")add()"> required placeholder="Enter the task">
+        <hr>
+        <button onclick="add()">Add a new task</button>
+    <ul id="list"></ul>
+    </div>
+    <script >
+        function add(){
+            let input=document.getElementById("task");
+            let text=input.value.trim();
+            if(text==="")return;
+
+            let li=document.createElement("li");
+            li.innerHTML=text+"<button class="delete">delete</button>";
+
+            li.onclick=()=>li.classList.toggle("done");
+            li.querySelector(".delete").onclick=(e)=>{
+                e.stopPropagation();
+                li.remove();
+            };
+            document.getElementById("list").appendChild(li);
+            input.value="";
+            
+        }
+    </script>
+</body>
+</html>

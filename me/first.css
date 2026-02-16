@@ -1,0 +1,19 @@
+div{
+    background-color: chocolate;
+    #one{
+        color:yellow;
+    }
+    #two
+    {
+        color: aqua;
+    }
+    h3{
+        font-size: medium;
+
+    }
+    p{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        background-color: blueviolet;
+        color: cadetblue;
+    }
+}
