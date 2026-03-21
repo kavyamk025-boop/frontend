@@ -1,0 +1,2 @@
+str="kavya"
+print(a.capatilize())

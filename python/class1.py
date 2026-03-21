@@ -100,5 +100,3 @@ e.deposit(10000)
 e.display()
 e.withdraw(20000)
 e.display()                  
-
-
