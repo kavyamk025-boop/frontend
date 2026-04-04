@@ -31,31 +31,58 @@
 // let revstr=[]
 // let arr=["apple","mango","ravi","banana","grapes","shastry","pineapple"]
 let arr=["ravi","shastry","mrunal","thakur","a","b","c","d",1,2,3,4,"$","#","%","@"]
-let word=[]
-let Num=[]
 let alpha=[]
+let number=[]
 let special=[]
-for(let i=0;i<arr.length;i++){
-    if(!isNaN(arr[i])){
-        Num.push(arr[i])
-    }
-    else if(arr[i].length==1){
-        if("!@$%^&*()?><|~".includes(arr[i])){
-         alpha.push(arr[i])
-        }
-        else{
-special.push(arr[i])
-        }
-    }
+let word=[]
 
-    else{
-        word.push(arr[i])
+for (let i=0;i<arr.length;i++){
+ if(arr[i].length>1){
+    word.push(arr[i])
+ }
+ if(arr[i].length==1){
+    if("!@#$%^&*():".includes(arr[i])){
+        special.push(arr[i])
     }
-}
-console.log(word)
-console.log(alpha)
-console.log(Num)
-console.log(special)
+    else{
+        alpha.push(arr[i])
+    }
+    
+    }
+   
+  if(!isNaN(arr[i])){
+        number.push(arr[i])}
+
+}  
+console.log(alpha);
+console.log(number);
+console.log(special);
+console.log(word);
+// let word=[]
+// let Num=[]
+// let alpha=[]
+// let special=[]
+// for(let i=0;i<arr.length;i++){
+//     if(!isNaN(arr[i])){
+//         Num.push(arr[i])
+//     }
+//     else if(arr[i].length==1){
+//         if("!@$%^&*()?><|~".includes(arr[i])){
+//          alpha.push(arr[i])
+//         }
+//         else{
+// special.push(arr[i])
+//         }
+//     }
+
+//     else{
+//         word.push(arr[i])
+//     }
+// }
+// console.log(word)
+// console.log(alpha)
+// console.log(Num)
+// console.log(special)
 
 
 
